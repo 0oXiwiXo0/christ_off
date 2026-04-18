@@ -11,7 +11,7 @@ import { Controller } from '@hotwired/stimulus';
  */
 export default class extends Controller {
     connect() {
-        this.element.textContent = 'Appuie ici !';
+        this.element.textContent = 'Ne pas clicker ici !';
     }
 
     agit(){
