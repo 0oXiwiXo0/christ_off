@@ -13,5 +13,42 @@
         <a href="{{ path('app_test') }}"> Lien vers page test </a>
     </div>
 
+
+    {#Cela permet d'utiliser une variable pui de la concaténé avec du texte ou autre#}
+    {% set ma_variable = 'Je suis une variable' %}
+    <p>{{ ma_variable ~ ' ici je teste du texte' }}</p>
+
+    {# Je définis ma variable et le multiplie#}
+    {% set ma_variable = 3 %}
+    <p>{{ ma_variable * 3 }}</p>
+
+    {#Ici on va tester  la fonction if#}
+    {% if ma_variable >10 %}
+        <p>{{ma_variable}} qui est supérieure à 10</p>
+    {% else %}
+        <p>ma variable est inférieur à 10</p>
+    {% endif %}
+
+    {#Je teste la boucle for, dans une liste  #}
+    <ul>
+        {% for i in 0..10 %}
+            <li>{{ i}}</li>
+        {% endfor %}
+    </ul>
+
+     {#Je teste une deuxième boucle for, dans une liste, penser à définir la varaible j #}
+
+        {% set j = 0 %}
+    <ul>
+        {% for i in 0..10 %}
+            {% set j = j+2 %}
+                <li>{{ i }} - {{ j }}</li>
+        {% endfor %}
+    </ul>
+
+
+
+
+
 {% endblock %}
 
